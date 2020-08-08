@@ -1,0 +1,995 @@
+*
+{
+    margin-top:0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+header
+    /* creation header */
+{
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    z-index:900;
+    border-bottom:solid;
+    border-color:#4472c4;
+    padding-top:1%;
+    padding-bottom: 1%;
+    background-color:white;
+
+}
+
+#langues{
+    /* affichage langues */
+    min-width: 14%;
+    padding-top: 1.2%
+}
+
+.image_site{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*Barre de navigation*/
+nav
+{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:white;;
+    position: relative;
+    top: 0;
+}
+nav header
+{
+    display:flex;
+}
+
+#element_nav_generale
+{
+    /* taille carac */
+    font-size:20px;
+    margin-top:10px;
+    margin-right:10px;
+    font-weight:bold;
+    padding-right:5px;
+    min-width: 700px
+}
+#menu_utilisateur
+{
+    display:flex;
+    flex-direction: column;
+    text-decoration:none;
+    position: fixed;
+    left:5px; top:100px;
+    width:1%;
+
+    background-color:white;
+    text-align:justify;
+    box-shadow:6px 6px 5px RGBa(120,120,120,0.5);
+    font-size: 20px;
+    visibility:hidden;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav ul li
+{
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+
+}
+
+#menu_utilisateur ul li{
+    float: left;
+    width: 100%;
+    height:100%;
+    font-size: 20px;
+    position: relative;
+    text-align:center;
+}
+
+nav ul::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu_utilisateur ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a
+{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 6px 0px;
+    margin:2px 0px;
+}
+
+#menu_utilisateur li{
+    width:100%;
+}
+
+#menu_utilisateur a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+#menu_utilisateur a:hover{
+    color: #4472c4;
+    border-left: 4px solid #4472c4;
+    padding-top: -4px;
+    background-color:RGBa(200,200,200,0.5);
+}
+
+nav a:hover
+{
+    color: #4472c4;
+    border-bottom: 4px solid #4472c4;
+    background-color:RGBa(200,200,200,0.5);
+}
+
+.sous
+{								/*Création du menu déroulant avec une ombre. Le menu déroulant est caché*/
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+#menu_utilisateur .sous{
+    margin-left:100%;
+    margin-top:-43px;
+    box-shadow:6px 6px 5px RGBa(120,120,120,0.5);
+    border-left: 4px solid #4472c4;
+}
+
+
+nav > ul li:hover .sous
+{								/*On affiche le menu déroulant, qui auparavant est caché, au survol de la souris*/
+    display: block;
+}
+
+.sous li
+{								/*Css du sous menu*/
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a
+{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover
+{
+    color:orange;
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.5);
+}
+
+
+#menu_utilisateur .sous a:hover{
+    color:orange;
+    border-left:4px solid orange;
+}
+
+.menu_deroulant > a::after
+{										/*Affichage d'un élément après le lien*/
+    content:"▼";
+    font-size: 12px;
+}
+
+
+
+#menu_utilisateur{
+    margin-top:50px;
+    font-weight:bold;
+}
+
+.drapeau
+{
+    border-style:solid;
+    border-color:white;
+    padding: 0;
+    max-width: 50px;
+    max-height: 40px;
+}
+
+.drapeau:hover
+{
+    border-style:solid;
+    border-color:gold;
+}
+
+.drapeau-link{
+    padding: 0;
+    text-decoration: none;
+    max-width: 50px;
+    max-height: 40px;
+}
+
+#contenu
+{
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align:center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 550px;
+    line-height: 24px;
+}
+
+footer{
+
+    left: 0; right: 0; bottom: 0;
+    height: 100px;
+    z-index:900;
+    border-width:2px;
+    border-color:black;
+    padding-top:15px;
+    text-align: center;
+    margin-top: 80px;
+
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+
+}
+
+#introduction{
+    width:83%;
+    background: rgba(255,255,255,0.55) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.15);
+    /*border:3px solid rgb(208,232,255);*/
+    border-radius:50px;
+    line-height: 24px;
+}
+#introduction p{
+    padding-left:50px;
+    padding-right:50px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 22px;
+    color: #333;
+    line-height: 24px;
+}
+
+#plus{
+    width: 80%;
+    text-align:right;
+    padding-top: 10px;
+    padding-left: 50px;
+
+}
+
+#plus a{
+    text-decoration: none;
+    color: #999;
+}
+
+#presentation{
+    display:flex;
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+
+}
+
+html
+{
+    height: 100%;
+}
+
+
+
+#footer{
+
+    justify-content: center;
+
+}
+
+#footer li{
+
+    margin: 0px 40px;
+
+}
+
+#footer a{
+
+
+    text-decoration: underline;
+    color: RGBa(0,0, 0,1);
+    margin: 10px 40px;
+    font-size: 10px;
+}
+#copyrightFooter{
+    border-bottom: #AAA solid 2px;
+    padding-bottom: 20px;
+    margin: 10px 70px;
+
+}
+#texteFooter{
+    padding-top: 20px;
+    margin: 0px 70px;
+
+}
+#texteFooter li{
+    margin: 0px 10px;
+
+}
+#createurs{
+    flex-direction: column;
+    padding-left:3%;
+}
+
+#affichage_createur{
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+#createurs li{
+    font-size: 0.6em;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    justify-content: center;
+
+}
+
+label{
+    margin-left: 20px;
+    margin-top:5%;
+    margin-bottom:5%;
+    font-size: 16px;
+    color: rgb(0,0,0);
+    font-family: Avenir, sans-serif;
+
+}
+
+fieldset{
+    max-width: 500px; /*réduction du cadre du formulaire à droite*/
+    margin: auto;
+    background-color: rgb(208,232,255);
+    padding:20px;
+    margin-bottom: 50px;
+}
+
+fieldset p{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 30%;
+    height: 35px;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.age{
+    width:70px;
+
+}
+select{
+    margin-left:20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.email{
+    width: 200px;
+}
+
+.bouton{
+    width: 150px;
+    margin:auto;
+}
+.indication{
+    font-style: italic;
+    padding:20px;
+}
+
+.image{
+    margin:auto;
+}
+.noms{
+    display: flex;
+}
+.motpasse{
+    display: flex;
+}
+
+
+#motpasseoublie a{
+    color:RGBa(160,160,160,1);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.bouton{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.bouton_1{
+    height: 60px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left:-150px;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px grey;
+}
+
+.bouton_2{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+    margin: auto;
+}
+
+.form-group
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-inscription
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-inscription input
+{
+    width: 100%;
+}
+
+.btn-submit
+{
+    margin-left: 42px;
+    color: #2E1760;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 30px;
+    font-size: 28px;
+    width: 210px;
+    height: 80px;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.35) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.15);
+    display: block;
+    text-align: center;
+    vertical-align:middle;
+
+
+}
+
+/** Boutton CSS**/
+.btn-negatif
+{
+    background-color: #5c0000;
+    color: #FFFFFF33;
+}
+
+.btn-neutral
+{
+    background-color: #0005d5;
+    color: #FFFFFF;
+}
+
+.btn-good
+{
+    background: rgba(94, 255, 51,0.55) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.15);
+}
+
+.btn
+{
+    margin: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5em;
+    border: none;
+    width: auto;
+}
+
+
+/** CSS pour l'envoie de Tickets**/
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.ticket-formulaire textarea
+{
+    width: 40vw;
+    height: 25vh;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.ticket-formulaire
+{
+    max-width: 45vw;
+    overflow-wrap: break-word;
+}
+
+.mes-tickets
+{
+    border: none;
+    border-collapse: separate;
+    border-spacing: 10px;
+
+}
+
+.mes-tickets  td, .mes-tickets th
+{
+    text-align: center;
+    width: auto;
+    padding: 5px 10px;
+    margin: 0;
+    border: none;
+}
+.tickets-tableau-niveau-problem-Inconnu
+{
+    background-color: #383838;
+}
+
+.tickets-tableau-niveau-problem-Bas
+{
+    background-color: #028800;
+}
+
+.tickets-tableau-niveau-problem-Moyen
+{
+    background-color: #d06000;
+}
+
+.tickets-tableau-niveau-problem-Haut
+{
+    background-color: #b8000c;
+
+}
+
+.tickets-tableau-niveau-problem-Critique
+{
+    background-color: #380004;
+}
+
+.mes-tickets th
+{
+    color: #FFFFFF;
+    background-color: #1a1141;
+}
+
+.mes-tickets-td-2
+{
+    background-color:  rgb(208,185,255);
+}
+
+.ticket-individuel
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    max-width: 40vw;
+    border: solid black 5px;
+}
+
+.ticket-contenue
+{
+    min-width: 50%;
+    padding: 1vw;
+    background-color: rgba(82, 82, 82, 0.53);
+    text-align: justify;
+}
+
+.btn-repondre
+{
+    justify-content: center;
+    margin: auto;
+    font-size: 2em ;
+    padding: 0.5em;
+}
+
+/*CGU*/
+#CGU
+{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    text-align: justify;
+}
+
+
+.checkbox
+{
+    display: block;
+    right: auto;
+    height: 30px;
+    width: 30px;
+}
+.checkbox-label
+{
+    position: relative;
+    top: 25px;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+
+/* Partie du code CSS qui gère les balises spoiler */
+
+div.spoiler {
+    width: 100%;
+    position: relative;
+    word-wrap: break-word;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+div.spoiler > h4
+{
+    position: relative;
+}
+div.spoiler input.boutonSpoil {
+    background: rgba(255,255,255,0.35) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.15);
+    border: none;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 15px;
+}
+
+
+div.spoiler div.contenuSpoiler {
+    display: none;
+    width: 100%;
+    text-align: left;
+    margin-left: 28px ;
+    margin-top: 15px;
+
+}
+
+div.contenuSpoiler
+{
+    position: relative;
+    display: flex;
+}
+/*FIN de la partie du code CSS qui gère les balises spoilers*/
+
+.faq
+{
+    max-width: 50%;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+.consulter-faq-admin
+{
+    max-width: 50%;
+}
+
+.consulter-faq-admin > h1,.consulter-faq-admin > h2, .consulter-faq-admin > p
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.faq-link-aide
+{
+    text-decoration: none;
+    margin-right: 2%;
+}
+
+/**Nous contacter**/
+#NousContacter
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#titre_CGU
+{
+    text-align: center;
+    text-align: -moz-center;
+}
+
+/*CSS - Notification*/
+.notification
+{
+    font-size: 1.5em;
+    padding: 1.5em;
+    max-width: 50%;
+    border-radius: 1em;
+    color: #FFFFFF;
+    text-align: -moz-center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.success
+{
+    background-color: #49a54d;
+}
+.warning
+{
+    background-color: #ccb037 ;
+}
+.error
+{
+    background-color: #9b3a3a;
+}
+
+/**
+Modifier par Augustin ROUSSET-ROUVIERE
+25/04/2020
+ajout code CSS pour les pages de melvin
+**/
+
+
+#titre_CGU{
+    text-align:center;
+}
+
+
+#logoInfiniteMeasure {
+    width: 300px;
+    height: auto;
+    display:block;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+#presentationTest{
+    background: rgba(255,255,255,0.65) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 13px rgba(0,0,0,0.15);
+    border-radius: 98px;
+    margin-left: 160px;
+    margin-right: 160px;
+    opacity: 1;
+    text-align: center;
+}
+
+#presentatationTest #partie1 {
+    display: inline-block;
+    border-bottom: dashed #FCF5F5;
+}
+
+
+
+#presentationTest #partie1 p{
+    text-align: center;
+    margin-left : 130px;
+    margin-right : 130px;
+    padding-top: 70px;
+    font-size: 23px;
+    color: #717481;
+
+
+}
+
+
+#partie1 ul{
+
+    display:inline-flex;
+    margin: 50px;
+    padding-bottom: 73px;
+    border-bottom: 3px dashed white;
+
+}
+#partie1 ul li img{
+    height: 230px;
+    width: auto;
+    margin-right: 90px;
+    margin-left: 90px;
+
+}
+
+#partie2 #description {
+    color: #A1C2F7;
+    font-size: 42px;
+    font-family: Roboto, sans-serif;
+    font-style: bold;
+    padding-top: 10px;
+    margin-bottom: 130px;
+}
+
+#partie2 .logo{
+    float:left;
+    margin-left: 100px;
+    width: 50px;
+    height: auto;
+
+}
+
+#partie2 .test {
+    font-family: Roboto, sans-serif;
+    font-style: bold;
+    font-size: 30px;
+    color: #717481;
+    float: left;
+    margin-left : 60px;
+}
+
+#partie2 ul  {
+    margin-bottom: 0px;
+    margin-top: 120px;
+}
+
+#partie2 .text  {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #717481;
+    float:inherit;
+    margin-left : 200px;
+    margin-right: 80px;
+    display: inline-block;
+    text-align: justify;
+}
+
+#partieReflexeVisuel li img{
+    width: 100px;
+
+}
+
+#partie2 {
+    margin-bottom: 200px;
+    padding-bottom: 1px;
+}
+
+
+#partie2 .logo:hover{
+    opacity: 0.8;
+}
+
+/**
+Fin modif Augustin RR
+25/04/2020 12:34
+*/
+#partieMemorisationCouleur{
+    margin-bottom: 0px;
+}
+
+#contenu section h1{
+    font-size: 35px;
+    margin: 40px 0px;
+
+
+}
+
+#contenu section p {
+    margin: 30px 10%;
+    text-align: justify;
+}
+
+#contenu section article {
+    line-height: 34px;
+    text-align: center;
+    padding-top: 15px;
+
+
+}
+
+#Frequence_cardiaque{
+    display: block;
+    margin-left: 135px;
+    margin-bottom: 20px;
+}
+
+#Temperature_peau{
+    display: block;
+    margin-left: 135px;
+    margin-bottom: 20px;
+}
+#Reflexes_visuels{
+    display: block;
+    margin-left: 135px;
+    margin-bottom: 20px;
+}
+#Reconnaissance_tonalite{
+    display: block;
+    margin-left: 135px;
+    margin-bottom: 20px;
+}
+#Memorisation_couleurs{
+    display: block;
+    margin-left: 135px;
+    margin-bottom: 20px;
+}
+#contenu section article p {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#contenu section {
+    display: inline-block;
+    width: 100%;
+    text-align: end;
+    margin-bottom: 40px;
+
+}
+
+.boutonSpoil{
+    font-size: 23px;
+    background: rgba(255,255,255,0.35) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.15);
+
+}
+.contenuSpoiler{
+    margin-top: 2px;
+    padding-right: 20%;
+    text-align: left;
+}
+.faq{
+    justify-content: left;
+    margin-bottom: 7px;
+
+}
+#question {
+    width: 300px;
+}
